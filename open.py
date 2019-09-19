@@ -7,7 +7,7 @@ import xlwt#用来创建excel文档并写入数据
 def get_content(page):
     url ='http://search.51job.com/list/000000,000000,0000,00,9,99,python,2,'+ str(page)+'.html'
     a = urllib.request.urlopen(url)#打开网址
-    html = a.read().decode('gbk')#读取源代码并转为unicode.
+    html = a.read().decode('gbk')#读取源代码并转为unicode..
     return html
 
 def get(html):
