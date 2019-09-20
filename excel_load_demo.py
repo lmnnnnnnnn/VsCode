@@ -1,8 +1,5 @@
 # coding=utf-8
-
 import xlrd
-
-
 # data = xlrd.open_workbook('C:/svn_home/个人目录/李孟南（）/其他/车种排量.xls')
 # table = data.sheets()[0]
 # nrows = table.nrows
