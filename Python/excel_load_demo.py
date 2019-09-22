@@ -1,3 +1,9 @@
+''' 
+@Author: Mengnan Li 
+@Date: 2019-09-22 21:50:43 
+@Last Modified by: Mengnan Li 
+@Last Modified time: 2019-09-22 21:50:43 
+'''
 # coding=utf-8
 import xlrd
 # data = xlrd.open_workbook('C:/svn_home/个人目录/李孟南（）/其他/车种排量.xls')
@@ -38,9 +44,10 @@ import xlrd
 # readfile()
 
 def openfile():
-    data = xlrd.open_workbook(r"C:\Users\sas\Desktop\Mengnan Li-工作日志-2019.xlsx")
+    data = xlrd.open_workbook(
+        r"C:\Users\sas\Desktop\Mengnan Li-工作日志-2019.xlsx")
     # 读取共有多少个工作表，表名为
-    sheet_num = data.nsheets 
+    sheet_num = data.nsheets
     names = data.sheet_names()
     print("共有{}个工作表，表名为{}".format(sheet_num, names))
     # 可以通过函数、索引、名称获得工作表
@@ -57,4 +64,6 @@ def openfile():
     # 循环来遍历一次文件
     for i in range(n_of_rows):
         print(sheet_1_by_name.row_values(i))
+
+
 openfile()
