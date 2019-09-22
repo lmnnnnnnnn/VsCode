@@ -5,7 +5,7 @@ import pymysql
 connection = pymysql.connect(host='localhost', port=3306, user='root', passwd='root',
                              db='test', charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
 
-try:  
+try:
     # 通过cursor创建游标
 
     cursor = connection.cursor()
@@ -20,10 +20,10 @@ try:
 
     # 获取所有记录列表
 
-    results = cursor.fetchall() 
-    # print(results) 
-    for data in results:      
-        # 打印结果      
+    results = cursor.fetchall()
+    # print(results)
+    for data in results:
+        # 打印结果
         print(data)
 
 except Exception:
