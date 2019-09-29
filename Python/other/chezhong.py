@@ -12,6 +12,7 @@ import pandas as pd
 inputfile = r'/Users/Apology/Documents/车种竞争力_李岳思路.xlsx'
 data = pd.read_excel(inputfile,index_col=u'时间(Time)',sheet_name=2)
 
+data = data[(data[u'本品最低市场价平均值(Avg_1)'] > 400) & (data[u'本品最低市场价平均值(Avg_1)'] < 65000)]
 # print(data.corr()) # 相关系数矩阵，即给出了任意两列之间的相关系数
 outfile = data.describe()
 # print(data.sum())
