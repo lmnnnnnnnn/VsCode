@@ -10,8 +10,11 @@ from __future__ import print_function
 import pandas as pd
 
 inputfile = r'/Users/Apology/Documents/车种竞争力_李岳思路.xlsx'
-data = pd.read_excel(inputfile,index_col=u'时间(Time)',sheet_name=2) 
+data = pd.read_excel(inputfile,index_col=u'时间(Time)',sheet_name=2)
 
-print(data.corr()) # 相关系数矩阵，即给出了任意两列之间的相关系数
+# print(data.corr()) # 相关系数矩阵，即给出了任意两列之间的相关系数
+outfile = data.describe()
+# print(data.sum())
 # print(data.corr()[u'']) # 只显示‘百合酱蒸凤爪’与其他菜式的相关系数
 # print('相关系数为：%s' % data[u'百合酱蒸凤爪'].corr(data[u'翡翠蒸香茜饺'])) # 计算'百合酱蒸凤爪'与'翡翠蒸香茜饺'的相关系数
+outfile.to_excel(r'/Users/Apology/Documents/aaa.xlsx',)
