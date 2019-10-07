@@ -27,7 +27,6 @@ from sklearn.cluster import KMeans  #引入KMeans
 kmodel = KMeans(n_clusters = k, n_jobs = 4) #建立模型, n_jobs是并行数，一般等于cpu数较好
 kmodel.fit(data.values.reshape((len(data), 1))) #训练模型
 c = pd.DataFrame(kmodel.cluster_centers_).sort_values(0) #输出聚类中心，并且排序(默认是随机排序的)
-print(c)
 # w = pd.rolling_mean(c, 2).iloc[1:] #相邻两项求中点，作为边界点
 w = c.rolling(2).mean().iloc[1:]
 w = [0] + list(w[0]) + [data.max()] #把末尾边界点加上
