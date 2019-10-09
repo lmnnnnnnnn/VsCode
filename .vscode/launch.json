@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - QuickStart",
+            "request": "launch",
+            "mainClass": "QuickStart",
+            "projectName": "myfile_8cb8334a"
+        }
+    ]
+}
