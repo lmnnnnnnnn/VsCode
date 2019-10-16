@@ -2,8 +2,8 @@ import pymysql
 
 # 连接MySQL数据库
 
-connection = pymysql.connect(host='localhost', port=3306, user='root', passwd='root',
-                             db='test', charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
+connection = pymysql.connect(host='62.234.80.46', port=3306, user='root', passwd='limengnan',
+                             db='TEST', charset='utf8mb4', cursorclass=pymysql.cursors.DictCursor)
 
 try:
     # 通过cursor创建游标
@@ -12,7 +12,7 @@ try:
 
     # 创建sql 语句
 
-    sql = "select * from student"
+    sql = "select * from Course"
 
     # 执行sql语句
 
@@ -29,4 +29,5 @@ try:
 except Exception:
     print("查询失败")
 
-# 关闭游标连接cursor.close()# 关闭数据库连接connection.close()
+cursor.close()
+connection.close()
