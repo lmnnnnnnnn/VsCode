@@ -34,4 +34,3 @@ def main():
         print("输入信息有误")
 
 main()
-
