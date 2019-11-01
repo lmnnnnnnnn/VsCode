@@ -6,7 +6,6 @@ outputfile = r'C:\Users\sas\Desktop\b.xlsx'
 
 data = pd.read_excel(inputfile)
 
-
 # print(inputfile.dtypes)
 # inputfile['销量'].astype('int')
 # a['group'] = np.where(a['销量'] > 4000, 'High', 'Low') 
