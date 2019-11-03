@@ -17,7 +17,7 @@ def mining():
     # print(data.corr()) # 相关系数矩阵，即给出了任意两列之间的相关系数
     outfile = data.describe()
      # print(data.sum())
-    # print(data.corr()[u'']) # 只显示‘百合酱蒸凤爪’与其他菜式的相关系数
+    print(data.corr()[u'']) # 只显示‘百合酱蒸凤爪’与其他菜式的相关系数
     # print('相关系数为：%s' % data[u'百合酱蒸凤爪'].corr(data[u'翡翠蒸香茜饺'])) # 计算'百合酱蒸凤爪'与'翡翠蒸香茜饺'的相关系数
     outfile.to_excel(r'C:\Users\sas\Desktop\aaa.xlsx',)
 

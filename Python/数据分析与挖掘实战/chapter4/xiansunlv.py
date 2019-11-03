@@ -15,9 +15,10 @@ import numpy as np
 inputfile = '/Users/Apology/Documents/Python数据分析与挖掘实战/chapter4/demo/data/electricity_data.xls' #供入供出电量数据
 outputfile =  '/Users/Apology/Documents/xiansunlv.xls' #属性构造后数据文件
 
-plt.rcParams['font.sans-serif'] = ['SimHei'] #用来正常显示中文标签
-plt.rcParams['axes.unicode_minus'] = False #用来正常显示负号
-plt.figure(figsize = (7, 5)) #创建图像区域，指定比例
+# plt.rcParams['font.sans-serif'] = [u'SimHei'] #用来正常显示中文标签
+# plt.rcParams['font.family'] = 'sans-serif'
+# plt.rcParams['axes.unicode_minus'] = False #用来正常显示负号
+# plt.figure(figsize = (7, 5)) #创建图像区域，指定比例
 
 data = pd.read_excel(inputfile) #读入数据
 data[u'线损率'] = (data[u'供入电量'] - data[u'供出电量'])/data[u'供入电量']
