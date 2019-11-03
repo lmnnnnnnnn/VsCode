@@ -8,12 +8,26 @@
 线损率属性构造
 '''
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 
 #参数初始化
 inputfile = '/Users/Apology/Documents/Python数据分析与挖掘实战/chapter4/demo/data/electricity_data.xls' #供入供出电量数据
 outputfile =  '/Users/Apology/Documents/xiansunlv.xls' #属性构造后数据文件
 
+plt.rcParams['font.sans-serif'] = ['SimHei'] #用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False #用来正常显示负号
+plt.figure(figsize = (7, 5)) #创建图像区域，指定比例
+
 data = pd.read_excel(inputfile) #读入数据
 data[u'线损率'] = (data[u'供入电量'] - data[u'供出电量'])/data[u'供入电量']
+
+x = data[u'供入电量']
+y = data[u'线损率']
+plt.xlabel(u'供入电量')
+plt.ylabel(u'线损率')
+plt.title('供入电量与线损率的关系')
+plt.plot(x,y)
+plt.show()
 
 data.to_excel(outputfile, index = False) #保存结果
