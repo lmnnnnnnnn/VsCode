@@ -28,7 +28,8 @@ y = data[u'线损率']
 plt.xlabel(u'gongrudianliang')
 plt.ylabel(u'xiansunlv')
 plt.title(u'供入电量与线损率的关系')
-plt.plot(x,y)
+plt.plot(x,y,label = u'供入电量')
+plt.legend()
 plt.show()
 
 data.to_excel(outputfile, index = False) #保存结果
